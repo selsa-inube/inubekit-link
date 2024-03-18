@@ -1,26 +1,22 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 import { inube } from "@inubekit/foundations";
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   font-family: ${({ theme }) =>
       theme?.typography?.label?.large?.font || "Roboto"},
     sans-serif;
-  line-height: ${({ theme, $size }) => {
-    theme?.typography?.label?.[$size]?.lineHeight ||
-      inube.typography.label[$size].lineHeight;
-  }};
-  font-size: ${({ theme, $size }) => {
-    theme?.typography?.label?.[$size]?.size ||
-      inube.typography.label[$size].size;
-  }};
-  letter-spacing: ${({ theme, $size }) => {
-    theme?.typography?.label?.[$size]?.tracking ||
-      inube.typography.label[$size].tracking;
-  }};
-  font-weight: ${({ theme, $size }) => {
-    theme?.typography?.label?.[$size]?.weight ||
-      inube.typography.label[$size].weight;
-  }};
+  line-height: ${({ theme }) =>
+    theme?.typography?.label?.large?.lineHeight ||
+    inube.typography.label.large.lineHeight};
+  letter-spacing: ${({ theme }) =>
+    theme?.typography?.label?.large?.tracking ||
+    inube.typography.label.large.tracking};
+  font-weight: ${({ theme }) =>
+    theme?.typography?.label?.large?.weight ||
+    inube.typography.label.large.weight};
+  font-size: ${({ $size }) => $size};
   margin: ${({ $margin }) => $margin};
   text-align: ${({ $textAlign }) => $textAlign};
   color: ${({ theme }) => {

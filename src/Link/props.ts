@@ -1,36 +1,31 @@
-const sizes = ["large", "medium", "small"] as const;
-type Size = (typeof sizes)[number];
+const parameters = {
+  docs: {
+    description: {
+      component:
+        "Component designed to redirect the user when they click on the text. It should be used when the user interacts with some type of text and it should redirect them to another page",
+    },
+  },
+};
 
 const props = {
-  parameters: {
-    docs: {
-      description: {
-        component:
-          "Component designed to redirect the user when they click on the text. It should be used when the user interacts with some type of text and it should redirect them to another page",
-      },
-    },
-  },
   size: {
-    options: sizes,
-    control: { type: "select" },
+    control: { type: "text" },
+    table: {
+      defaultValue: { summary: "20px" },
+    },
     description:
       "This prop is used to select one of the typography roles defined in the Foundations.",
-  },
-  margin: {
-    control: { type: "text" },
-    description:
-      "Sets the margin in px or global values for all four sides of the component.",
-    table: {
-      defaultValue: { summary: "0px" },
-    },
   },
   children: {
     control: { type: "text" },
     description: "The text to be displayed",
   },
+  path: {
+    description:
+      "is the path where the MenuLink is going to navigate and is required.",
+  },
   hover: {
     description: "Indicates when the mouse passes over the text",
   },
 };
-export { props };
-export type { Size };
+export { props, parameters };

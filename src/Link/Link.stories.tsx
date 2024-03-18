@@ -1,10 +1,19 @@
 import { Link, ILink } from ".";
-import { props } from "./props";
+import { BrowserRouter } from "react-router-dom";
+import { props, parameters } from "./props";
 
 const story = {
   tittle: "data/Link",
   component: Link,
+  parameters,
   argTypes: props,
+  decorators: [
+    (Story: React.ElementType) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
 };
 
 export const Default = (args: ILink) => {
@@ -13,8 +22,8 @@ export const Default = (args: ILink) => {
 
 Default.args = {
   children: "Link",
-  size: "small",
-  margin: "0px",
+  size: "20px",
+  path: "/",
 };
 
 export default story;
