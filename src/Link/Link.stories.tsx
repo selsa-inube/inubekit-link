@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { props, parameters } from "./props";
 
 const story = {
-  tittle: "data/Link",
+  title: "navigation/Link",
   component: Link,
   parameters,
   argTypes: props,
@@ -22,7 +22,8 @@ const Default = (args: ILink) => {
 
 Default.args = {
   children: "Link",
-  size: "20px",
+  size: "small",
+  type: "label",
   path: "/",
 };
 

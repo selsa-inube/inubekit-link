@@ -1,14 +1,16 @@
 import { StyledLink } from "./styles";
+import { Type, Size } from "./props";
 interface ILink {
   children: React.ReactNode;
-  size?: string;
-  path?: string;
+  size: Size;
+  type: Type;
+  path: string;
 }
 
 const Link = (props: ILink) => {
-  const { children, size = "20px", path } = props;
+  const { children, size, type, path } = props;
   return (
-    <StyledLink to={path} $size={size}>
+    <StyledLink to={path} $size={size} $type={type}>
       {children}
     </StyledLink>
   );

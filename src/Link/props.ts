@@ -1,3 +1,11 @@
+const types = ["body", "display", "label", "title", "headline"] as const;
+
+const sizes = ["large", "medium", "small"] as const;
+
+type Size = (typeof sizes)[number];
+
+type Type = (typeof types)[number];
+
 const parameters = {
   docs: {
     description: {
@@ -8,11 +16,18 @@ const parameters = {
 };
 
 const props = {
-  size: {
-    control: { type: "text" },
+  type: {
+    options: types,
+    control: { type: "select" },
+    description:
+      "This prop is used to select one of the typography roles defined in the Foundations.",
     table: {
-      defaultValue: { summary: "20px" },
+      defaultValue: { summary: "bodyLarge" },
     },
+  },
+  size: {
+    options: sizes,
+    control: { type: "select" },
     description:
       "This prop is used to select one of the typography roles defined in the Foundations.",
   },
@@ -29,3 +44,4 @@ const props = {
   },
 };
 export { props, parameters };
+export type { Size, Type };

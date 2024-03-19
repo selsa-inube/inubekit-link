@@ -5,18 +5,14 @@ import { inube } from "@inubekit/foundations";
 
 const StyledLink = styled(Link)`
   font-family: ${({ theme }) =>
-      theme?.typography?.label?.large?.font || "Roboto"},
+      theme?.typography?.[$type]?.[$size]?.font || "Roboto"},
     sans-serif;
-  line-height: ${({ theme }) =>
-    theme?.typography?.label?.large?.lineHeight ||
-    inube.typography.label.large.lineHeight};
-  letter-spacing: ${({ theme }) =>
-    theme?.typography?.label?.large?.tracking ||
-    inube.typography.label.large.tracking};
-  font-weight: ${({ theme }) =>
-    theme?.typography?.label?.large?.weight ||
-    inube.typography.label.large.weight};
-  font-size: ${({ $size }) => $size};
+  line-height: ${({ $type, $size }) =>
+    inube.typography[$type][$size].lineHeight};
+  font-size: ${({ $type, $size }) => inube.typography[$type][$size].size};
+  letter-spacing: ${({ $type, $size }) =>
+    inube.typography[$type][$size].tracking};
+  font-weight: ${({ $type, $size }) => inube.typography[$type][$size].weight};
   margin: ${({ $margin }) => $margin};
   text-align: ${({ $textAlign }) => $textAlign};
   color: ${({ theme }) => {
