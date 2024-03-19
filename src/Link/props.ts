@@ -2,9 +2,9 @@ const types = ["body", "display", "label", "title", "headline"] as const;
 
 const sizes = ["large", "medium", "small"] as const;
 
-type Size = (typeof sizes)[number];
+type ILinkSize = (typeof sizes)[number];
 
-type Type = (typeof types)[number];
+type ILinkType = (typeof types)[number];
 
 const parameters = {
   docs: {
@@ -44,4 +44,4 @@ const props = {
   },
 };
 export { props, parameters };
-export type { Size, Type };
+export type { ILinkSize, ILinkType };
