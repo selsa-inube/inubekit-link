@@ -1,5 +1,5 @@
 import { StyledLink } from "./styles";
-export interface ILink {
+interface ILink {
   children: React.ReactNode;
   size?: string;
   path?: string;
@@ -15,3 +15,4 @@ const Link = (props: ILink) => {
 };
 
 export { Link };
+export type { ILink };

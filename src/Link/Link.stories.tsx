@@ -16,7 +16,7 @@ const story = {
   ],
 };
 
-export const Default = (args: ILink) => {
+const Default = (args: ILink) => {
   return <Link {...args}>{args.children}</Link>;
 };
 
@@ -26,4 +26,5 @@ Default.args = {
   path: "/",
 };
 
+export { Default };
 export default story;
