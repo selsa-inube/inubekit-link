@@ -2,7 +2,7 @@ import { StyledLink } from "./styles";
 import { ILinkType, ILinkSize } from "./props";
 interface ILink {
   children: React.ReactNode;
-  size: ILinkSize;
+  size?: ILinkSize;
   type: ILinkType;
   path: string;
 }
