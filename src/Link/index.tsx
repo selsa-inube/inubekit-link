@@ -3,12 +3,12 @@ import { ILinkType, ILinkSize } from "./props";
 interface ILink {
   children: React.ReactNode;
   size?: ILinkSize;
-  type: ILinkType;
+  type?: ILinkType;
   path: string;
 }
 
 const Link = (props: ILink) => {
-  const { children, size, type, path } = props;
+  const { children, size = "small", type = "label", path } = props;
   return (
     <StyledLink to={path} $size={size} $type={type}>
       {children}

@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { inube } from "@inubekit/foundations";
 
 const StyledLink = styled(Link)`
-  font-family: ${({ $type, $size }) => inube.typography[$type][$size].font};
+  font-family: ${({ theme, $type, $size }) =>
+      theme?.typography?.[$type]?.[$size]?.font || "Roboto"},
+    sans-serif;
   line-height: ${({ $type, $size }) =>
     inube.typography[$type][$size].lineHeight};
   font-size: ${({ $type, $size }) => inube.typography[$type][$size].size};
