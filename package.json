@@ -1,5 +1,5 @@
 {
-  "name": "@inubekit/your-component-name",
+  "name": "@inubekit/link",
   "homepage": "https://inubeds.vercel.app/",
   "author": "inube",
   "main": "dist/index.es.js",
@@ -18,7 +18,8 @@
     }
   },
   "files": [
-    "dist/index.es.js"
+    "dist/index.es.js",
+    "dist/index.es.d.ts"
   ],
   "scripts": {
     "dev": "vite",
@@ -31,9 +32,14 @@
     "auto": "auto",
     "changelog": "npm run auto changelog",
     "version": "rm -rf dist && npm run build",
-    "release": "git push --follow-tags && npm run auto release"
+    "release": "git push --follow-tags && npm run auto release",
+    "autorelease": "auto shipit"
   },
-  "dependencies": {
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.8"
@@ -70,5 +76,14 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selsa-inube/inubekit-link.git"
+  },
+  "auto": {
+    "plugins": [
+      "npm"
+    ]
   }
 }
