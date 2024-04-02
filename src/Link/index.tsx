@@ -8,7 +8,7 @@ interface ILink {
 }
 
 const Link = (props: ILink) => {
-  const { children, size = "small", type = "body", path } = props;
+  const { children, size = "large", type = "body", path } = props;
   return (
     <StyledLink to={path} $size={size} $type={type}>
       {children}

@@ -22,7 +22,7 @@ const Default = (args: ILink) => {
 
 Default.args = {
   children: "Link",
-  size: "small",
+  size: "large",
   type: "body",
   path: "/",
 };
