@@ -1,1 +1,3 @@
-export * from ".";
+export { Link } from "./Link";
+export type { ILink } from "./Link";
+export type { ILinkType, ILinkSize } from "./Link/props";
