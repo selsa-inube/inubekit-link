@@ -1,3 +1,25 @@
+# v1.0.0 (Wed Apr 03 2024)
+
+#### 💥 Breaking Change
+
+- Create component and export it `<Link >` [#1](https://github.com/selsa-inube/inubekit-link/pull/1) ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+#### 🐛 Bug Fix
+
+- Add auto publish [#3](https://github.com/selsa-inube/inubekit-link/pull/3) ([@cmarin001](https://github.com/cmarin001))
+- Update all inubekit/link to storybook v8 [#2](https://github.com/selsa-inube/inubekit-link/pull/2) ([@cmarin001](https://github.com/cmarin001))
+
+#### ⚠️ Pushed to `main`
+
+- Initial commit ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+#### Authors: 2
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+- Januar Asprilla  ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+---
+
 # v0.0.1 (Wed Jan 17 2024)
 
 #### ⚠️ Pushed to `main`
