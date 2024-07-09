@@ -12,7 +12,7 @@ const StyledLink = styled(Link)`
   font-size: ${({ $type, $size }) => inube.typography[$type][$size].size};
   letter-spacing: ${({ $type, $size }) =>
     inube.typography[$type][$size].tracking};
-  font-weight: ${({ $type, $size }) => inube.typography[$type][$size].weight};
+  font-weight: 400;
   margin: ${({ $margin }) => $margin};
   text-align: ${({ $textAlign }) => $textAlign};
   color: ${({ theme }) => {
