@@ -1,12 +1,10 @@
-import { Link, ILink } from ".";
 import { BrowserRouter } from "react-router-dom";
-import { props, parameters } from "./props";
+import { Link, ILink } from ".";
+import { parameters, props } from "./props";
 
 const story = {
-  title: "navigation/Link",
-  component: Link,
-  parameters,
   argTypes: props,
+  component: Link,
   decorators: [
     (Story: React.ElementType) => (
       <BrowserRouter>
@@ -14,6 +12,8 @@ const story = {
       </BrowserRouter>
     ),
   ],
+  parameters,
+  title: "navigation/Link",
 };
 
 const Default = (args: ILink) => {
@@ -22,9 +22,11 @@ const Default = (args: ILink) => {
 
 Default.args = {
   children: "Link",
-  size: "large",
-  type: "body",
   path: "/",
+  rel: "noopener noreferrer",
+  size: "large",
+  target: "_self",
+  type: "body",
 };
 
 export { Default };
