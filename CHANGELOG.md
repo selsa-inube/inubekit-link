@@ -1,3 +1,15 @@
+# v1.9.0 (Mon Aug 26 2024)
+
+#### 🚀 Enhancement
+
+- Add `target` and `rel` Attributes to `<Link />` Component [#12](https://github.com/selsa-inube/inubekit-link/pull/12) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.8.0 (Wed Aug 21 2024)
 
 #### 🚀 Enhancement
