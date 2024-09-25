@@ -1,3 +1,15 @@
+# v1.15.0 (Wed Sep 25 2024)
+
+#### 🚀 Enhancement
+
+- Move link tokens from foundations to component [#18](https://github.com/selsa-inube/inubekit-link/pull/18) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.14.0 (Mon Sep 02 2024)
 
 #### 🚀 Enhancement
