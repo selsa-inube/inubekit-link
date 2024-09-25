@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
 import { inube } from "@inubekit/foundations";
+import { tokens } from "./Tokens/tokens";
 
 const StyledLink = styled(Link)`
   font-family: ${({ theme, $type, $size }) =>
@@ -16,18 +16,16 @@ const StyledLink = styled(Link)`
   margin: ${({ $margin }) => $margin};
   text-align: ${({ $textAlign }) => $textAlign};
   color: ${({ theme }) => {
-    return (
-      theme?.link?.content?.color?.regular || inube.link.content.color.regular
-    );
+    return theme?.link?.content?.color?.regular || tokens.content.color.regular;
   }};
   cursor: pointer;
   text-decoration: none;
   &:hover {
     border-bottom: 1px solid
       ${({ theme }) =>
-        theme?.link?.content?.color?.hover || inube.link.content.color.hover};
+        theme?.link?.content?.color?.hover || tokens.content.color.hover};
     color: ${({ theme }) =>
-      theme?.link?.content?.color?.hover || inube.link.content.color.hover};
+      theme?.link?.content?.color?.hover || tokens.content.color.hover};
   }
 `;
 
